@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="/static/login_style.css" type="text/css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .bg {
+              background-image: url("static/login_wallpaper4.jpg");
+              height: 100%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="bg">
+        <form action="/login" method="POST">
+        <div class="login">
+        <div class="login-screen">
+        <div class="app-title">
+        <h1>Login</h1>
+        </div>
+        <div class="login-form">
+        <div class="control-group">
+                        <input type="text" class="login-field" value="" placeholder="username" name="username">
+        <label class="login-field-icon fui-user" for="login-name"></label></div>
+        <div class="control-group">
+                        <input type="password" class="login-field" value="" placeholder="password" name="password">
+        <label class="login-field-icon fui-lock" for="login-pass"></label></div>
+        <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+               <h4 style="color: red;"> {{ message }} </h4>
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        </div>
+        </form>
+    </div>
+</body>
