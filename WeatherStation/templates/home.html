@@ -15,9 +15,19 @@
     right: 10px;
 }
 
+.text_right {
+    float: right;
+}
+
+.text_left {
+    float: left;
+}
+
 </style>
     <meta charset="UTF-8">
     <title>Realtime Weather Station</title>
+     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
@@ -29,41 +39,64 @@
     </form>
 </div>
 
-<div class="center">
-  <h1>Last Update: {{ lastDataTime }}</h1>
-</div>
 
 <div class="center">
-   <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header"><h5>Temperature:</h5></div>
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <h3 class="card-text">{{ lastTemperature }}°C</h3>
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button style="width:100%;" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <h1> <div class="text_left"> Last Update: {{ lastDataTime }} </div>  <div class="text_right"> &#11191; </div> </h1>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+
+        <div class="card-body">
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h5>Temperature:</h5></div>
+                    <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h3 class="card-text">{{ lastTemperature }}°C</h3>
+                  </div>
+                </div>
+
+
+                  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h5>Humidity:</h5></div>
+                    <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h3 class="card-text">{{ lastHumidity }}%</h3>
+                  </div>
+                </div>
+
+
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                    <div class="card-header"><h5>Atmospheric Pressure:</h5></div>
+                    <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <h3 class="card-text">{{ lastPressure }}hPa</h3>
+                </div>
+                </div>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
   </div>
+
+
 </div>
 </div>
 
 
-<div class="center">
-    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header"><h5>Humidity:</h5></div>
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <h3 class="card-text">{{ lastHumidity }}%</h3>
-  </div>
-</div>
-</div>
-
-
-<div class="center">
-<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-    <div class="card-header"><h5>Atmospheric Pressure:</h5></div>
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <h3 class="card-text">{{ lastPressure }}hPa</h3>
-  </div>
-</div>
-</div>
 
 <div class="center">
     {{ temperaturePlot }}
