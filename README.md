@@ -62,5 +62,11 @@ To change the logo to be shown on the display follow the steps:
 
 ![IMG_0002](https://user-images.githubusercontent.com/63566699/122680078-eb4bcd80-d1ed-11eb-9c66-81f6451eabd0.jpg)
 
+## To Do
 
+:heavy_check_mark: collapsable area for latest weather data
+
+:x: view system logs in another collapsible area
+
+:x: add symbols indicating whether the system is active or not
 
