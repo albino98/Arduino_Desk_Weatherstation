@@ -50,4 +50,17 @@ https://user-images.githubusercontent.com/63566699/122678847-bee18280-d1e8-11eb-
 ## Demo
 https://user-images.githubusercontent.com/63566699/122670651-65b32800-d1c3-11eb-873c-ad8b4ba14d24.MOV
 
+## How to change the logo shown on the display
+
+To change the logo to be shown on the display follow the steps:
+1.  choose a logo without shading
+2.  change the resolution to adapt it to the size of the display (I chose 79x31 in order to view the footer with temperatures and time on the display). You can       change the resolution with Paint
+3.  Convert the logo from png or jpeg to xbm using online tools
+4.  Finally replace the xbm code generated in WeatherStationImages.h in logo PROGEM
+
+![image](https://user-images.githubusercontent.com/63566699/122680036-b5a6e480-d1ed-11eb-9f09-a96ce5628539.png)
+
+![IMG_0002](https://user-images.githubusercontent.com/63566699/122680078-eb4bcd80-d1ed-11eb-9c66-81f6451eabd0.jpg)
+
+
 
