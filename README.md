@@ -66,6 +66,8 @@ To change the logo to be shown on the display follow the steps:
 
 :heavy_check_mark: collapsable area for latest weather data
 
+:x: add logging on DB
+
 :x: view system logs in another collapsible area
 
 :x: add symbols indicating whether the system is active or not
