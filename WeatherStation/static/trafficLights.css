@@ -1,0 +1,47 @@
+.traffic-light {
+  margin-left: 34px;
+  margin-top: -12px;
+  background-color: #e0e0e0;
+  width: 175px;
+  height: 60px;
+  border-radius: 100px;
+}
+input {
+  appearance: none;
+  user-select: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: 18px;
+  border-radius: 100%;
+}
+input.color1 {
+  background-color: #4f0000;
+  box-shadow: 0 0 0vmin#4f0000;
+}
+input.color1checked {
+  background-color: #ff0000;
+  box-shadow: 0 0 1vmin #ff0000;
+}
+input.color2 {
+  background-color: #4a3600;
+  box-shadow: 0 0 0vmin #4a3600;
+}
+input.color2checked {
+  background-color: #fdbe40;
+  box-shadow: 0 0 1vmin #fdbe40;
+}
+input.color3 {
+  background-color: #15511e;
+  box-shadow: 0 0 0vmin #00cf03;
+}
+input.color3checked {
+  background-color: #00cf03;
+  box-shadow: 0 0 1vmin #00cf03;
+}
+
+* {
+  user-select: none;
+  outline: none;
+}

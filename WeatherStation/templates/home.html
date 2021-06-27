@@ -12,7 +12,7 @@
 .top_right{
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 60px;
 }
 
 .text_right {
@@ -30,12 +30,13 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="stylesheet" href="/static/trafficLights.css" type="text/css">
 </head>
 <body>
 
 <div class="top_right">
     <form action="/logout" method="POST">
-        <input type="submit" value="Logout" class="btn btn-primary">
+        <input type="submit" value="Logout" class="btn btn-primary" style="width: 95px;height: 40px;">
     </form>
 </div>
 
@@ -46,7 +47,7 @@
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button style="width:100%;" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          <h1> <div class="text_left"> Last Update: {{ lastDataTime }} </div>  <div class="text_right"> &#11191; </div> </h1>
+          <h1> <div class="text_left"> Last Update: {{ lastDataTime }} </div>  <div class="text_right">  &#11191; </div> </h1>
         </button>
       </h5>
     </div>
@@ -54,6 +55,32 @@
     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
 
         <div class="card-body">
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                  <div class="card-header">
+                    {% if systemOn %}
+                        <h5>System: ON</h5>
+                    {% else %}
+                         <h5>System: OFF</h5>
+                    {% endif %}
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                        <div class="traffic-light">
+
+                            {% if systemOn %}
+                              <input type="radio" name="rag1" class="color1" value="1">
+                              <input type="radio" name="rag1" class="color2" value="2">
+                              <input type="radio" name="rag1" class="color3checked" value="3">
+                            {% else %}
+                              <input type="radio" name="rag1" class="color1checked" value="1">
+                              <input type="radio" name="rag1" class="color2" value="2">
+                              <input type="radio" name="rag1" class="color3" value="3">
+                            {% endif %}
+
+                        </div>
+                  </div>
+                </div>
+
 
                 <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                     <div class="card-header"><h5>Temperature:</h5></div>
@@ -85,17 +112,12 @@
       </div>
 
 
-
-
-
-
     </div>
   </div>
 
 
 </div>
 </div>
-
 
 
 <div class="center">

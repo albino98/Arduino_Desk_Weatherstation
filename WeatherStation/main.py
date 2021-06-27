@@ -20,6 +20,8 @@ import mysql.connector
 import plotly
 from plotly.graph_objs import Scatter, Layout
 import logging
+from datetime import datetime, timedelta
+import pytz
 
 app = Flask(__name__)
 app.secret_key = "<g\x93E\xf3\xc6\xb8\xc4\x87\xff\xf6\x0fxD\x91\x13\x9e\xfe1+%\xa3\x83\xb6"
@@ -63,6 +65,24 @@ def getLatestWeatherData():
         mydb.close()
         result = False
     return result
+
+def checkSystemOn():
+    systemOn = False
+    IST = pytz.timezone('Europe/Rome')
+    datetime_utc = datetime.now(IST)
+    #print("Date & Time in UTC : ", datetime_utc.strftime('%Y:%m:%d %H:%M:%S'))
+    latestData = getLatestWeatherData()
+    lastDate = latestData[0][0]
+    #print("Latest Date : ", lastDate.strftime('%Y:%m:%d %H:%M:%S'))
+    currentDateTime = datetime_utc.replace(tzinfo=None)
+    lastDateTime = lastDate.replace(tzinfo=None)
+    diffBetweenDates = currentDateTime-lastDateTime
+    #print("Difference: ", diffBetweenDates)
+    if diffBetweenDates > timedelta(minutes=15):
+        systemOn = False
+    else:
+        systemOn = True
+    return systemOn
 
 def getSpecificData(dataToSelect):
     mydb = connectToMySql()
@@ -134,7 +154,9 @@ def homePage():
         pressurePlot = createPlot(pressure, "Pressure")
         pressurePlotHtml = Markup(pressurePlot)
 
-        return render_template("home.html", lastDataTime=lastDataTime, lastTemperature=lastTemperature, lastHumidity=lastHumidity, lastPressure=lastPressure, temperaturePlot=temperaturesPlotHtml, humidityPlot=humidityPlotHtml, pressurePlot=pressurePlotHtml)
+        systemOn = checkSystemOn()
+
+        return render_template("home.html", lastDataTime=lastDataTime, lastTemperature=lastTemperature, lastHumidity=lastHumidity, lastPressure=lastPressure, temperaturePlot=temperaturesPlotHtml, humidityPlot=humidityPlotHtml, pressurePlot=pressurePlotHtml, systemOn=systemOn)
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
