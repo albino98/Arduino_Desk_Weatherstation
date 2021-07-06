@@ -28,6 +28,10 @@ D1---SCL
 D2---SDA
 
 
+![weatherStation_schematics vpd](https://user-images.githubusercontent.com/63566699/124649145-6a046400-de98-11eb-9ae6-82c244e2d203.jpg)
+
+
+
 ## Esp8266 Code Description
 For the project I used this KeeYees kit that can be purchased at this link: https://www.amazon.it/KeeYees-GY-BME280-Atmosferica-Temperatura-Breadboard/dp/B07T2H5QXC/ref=sr_1_12?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=keeyees&qid=1624183225&sr=8-12
 
