@@ -76,5 +76,8 @@ To change the logo to be shown on the display follow the steps:
 
 :x: view system logs in another collapsible area
 
-:heavy_check_mark: add symbols indicating whether the system is working or not
+:heavy_check_mark: add symbols indicating whether the system is working or not:
+
+![image](https://user-images.githubusercontent.com/63566699/125974641-41e2e72a-04b7-4d77-a63a-d4274c708ce6.png)
+
 
