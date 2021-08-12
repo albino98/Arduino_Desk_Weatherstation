@@ -69,7 +69,7 @@ To change the logo to be shown on the display follow the steps:
 1.  choose a logo without shading
 2.  change the resolution to adapt it to the size of the display (I chose 79x31 in order to view the footer with temperatures and time on the display). You can       change the resolution with Paint
 3.  Convert the logo from png or jpeg to xbm using online tools
-4.  Finally replace the xbm code generated in WeatherStationImages.h in logo PROGEM
+4.  Finally replace the xbm code generated in WeatherStationImages.h in logo PROGMEM
 
 ![image](https://user-images.githubusercontent.com/63566699/122680036-b5a6e480-d1ed-11eb-9f09-a96ce5628539.png)
 
@@ -88,3 +88,10 @@ To change the logo to be shown on the display follow the steps:
 ![image](https://user-images.githubusercontent.com/63566699/125974641-41e2e72a-04b7-4d77-a63a-d4274c708ce6.png)
 
 
+## License
+
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+
+License: [MIT](https://github.com/albino98/Arduino_Desk_Weatherstation/blob/main/LICENSE)
