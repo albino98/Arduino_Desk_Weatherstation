@@ -5,6 +5,10 @@
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
 
+<p align="center">
+  <img alt="logo" src="https://user-images.githubusercontent.com/63566699/129363483-482f40ab-d79a-4840-8403-ea86b529e504.png">
+</p>
+
 # Desk WeatherStation with esp8266 and Python-Flask web application
 
 Desk WeatherStation with esp8266, 1,3" oled display, GY-BME280 sensor and Python-Flask web application for data visualization.
