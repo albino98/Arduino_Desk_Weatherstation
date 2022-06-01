@@ -18,25 +18,23 @@ Desk WeatherStation with esp8266, 1,3" oled display, GY-BME280 sensor and Python
 ## Pin Connections
 The pin connections are the same as indicated in the KeeYees kit tutorial but I report them below:
 
-NodeMCU ESP8266<------->OLED
 
-3.3V---VCC
+|NodeMCU ESP8266	|OLED Display   	|
+|---		|---			|
+| 3.3V  |  VCC | 
+|  GND | GND  |
+| D1  | SCL  |
+| D2 | SDA|
 
-GND---GND
 
-D1---SCL
 
-D2---SDA
+|NodeMCU ESP8266	|BME280   	|
+|---		|---			|
+| 3.3V  |  VCC | 
+|  GND | GND  |
+| D1  | SCL  |
+| D2 | SDA|
 
-NodeMCU ESP8266<------->BME280
-
-3.3V---VCC
-
-GND---GND
-
-D1---SCL
-
-D2---SDA
 
 
 ![weatherStation_schematics vpd](https://user-images.githubusercontent.com/63566699/124649145-6a046400-de98-11eb-9ae6-82c244e2d203.jpg)
