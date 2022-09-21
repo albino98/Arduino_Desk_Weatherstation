@@ -89,6 +89,10 @@ To change the logo to be shown on the display follow the steps:
 
 ![image](https://user-images.githubusercontent.com/63566699/125974641-41e2e72a-04b7-4d77-a63a-d4274c708ce6.png)
 
+<a href="https://www.buymeacoffee.com/albyc">
+         <img alt="BuyMeACoffee" src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
+         style="height: 30px !important; width: 150px !important">
+      </a>
 
 ## License
 
